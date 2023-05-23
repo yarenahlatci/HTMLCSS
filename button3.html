@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUTTON 3</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #050801;
+      }
+      .animated-button {
+        background: #03e9f4;
+        color: #050801;
+        border: none;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 40px;
+        margin: 4px 2px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .animated-button:after {
+        content: "";
+        background: #ffffff;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+
+      .animated-button:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s;
+      }
+
+      .animated-button:hover:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="animated-button"><b>Hello World</b></button>
+  </body>
+</html>
