@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoğraf Yansıması</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: #000;
+      }
+      .div1 {
+        max-width: 800px;
+        max-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      img {
+        width: 40%;
+        height: 80%;
+        object-fit: cover;
+        -webkit-box-reflect: below 1px
+          linear-gradient(transparent, transparent, #0004);
+        transform-origin: center;
+        transform: perspective(800px) rotateY(25deg);
+        transition: 0.5s;
+        width: 50%;
+        height: auto;
+      }
+      .div1:hover img {
+        opacity: 0.3;
+      }
+      .div1 img:hover {
+        transform: perspective(800px) rotateY(0deg);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <img
+        src="https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-1652.jpg"
+        alt="fotograf1"
+      />
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/007/559/606/original/a-children-learning-coding-or-computer-programming-flat-illustration-coding-for-kids-basic-computer-programing-can-be-used-for-web-landing-page-social-media-promotion-etc-vector.jpg"
+        alt="fotograf2"
+      />
+      <img
+        src="https://media.istockphoto.com/id/1241710244/vector/working-at-home-vector-flat-style-illustration-online-career-coworking-space-illustration.jpg?s=612x612&w=0&k=20&c=U34U9zhLBWDEbfPmgmlnFJiP-EuWu7MEUCxUls_BnKU="
+        alt="fotograf3"
+      />
+    </div>
+  </body>
+</html>
